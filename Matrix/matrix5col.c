@@ -14,7 +14,7 @@ int main()
         for (j = 1; j <= n; j++)
             scanf("%f", &a[i][j]);
 
-    printf("Enter the number of two rows to be exchanged \n");
+    printf("Enter the number of two columns to be exchanged \n");
     scanf("%d%d", &m1, &n1);
     for (i = 1; i <= m; ++i)
     {
@@ -22,7 +22,7 @@ int main()
         a[i][n1] = a[i][m1];
         a[i][m1] = c;
     }
-    printf("The matrix after interchanging the two rows\n");
+    printf("The matrix after interchanging the two columns\n");
     for (i = 1; i <= m; i++)
     {
         for (j = 1; j <= n; j++)
