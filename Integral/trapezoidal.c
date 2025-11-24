@@ -8,10 +8,10 @@ int main()
     int i, n;
     printf("enter the subdivision n\n");
     scanf("%d", &n);
-    printf("enter the upper limit b\n");
-    scanf("%f", &b);
     printf("enter the lower limit a\n");
     scanf("%f", &a);
+    printf("enter the upper limit b\n");
+    scanf("%f", &b);
     sum = 0.0;
     h = (b - a) / n;
     for (i = 1; i < n; i++)
