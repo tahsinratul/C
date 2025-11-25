@@ -13,8 +13,10 @@ int main()
     scanf("%f", &x[0]);
     printf("enter the differences\n");
     scanf("%f", &h);
-    for (i = 0; i < n; i++)
-        x[i + 1] = x[i] + h;
+    for (i = 1; i < n; i++)
+    {
+        x[i] = x[i - 1] + h;
+    }
     printf("enter the value of y\n");
     for (i = 0; i < n; i++)
         scanf("%f", &y[i]);

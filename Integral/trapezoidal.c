@@ -15,9 +15,11 @@ int main()
     sum = 0.0;
     h = (b - a) / n;
     for (i = 1; i < n; i++)
+    {
         sum = sum + f(a + i * h);
-    result = h * 0.5 * (f(a) + f(b) + 2 * sum);
-    printf("the result is %f\n", result);
+        result = (h / 2) * (f(a) + f(b) + 2 * sum);
+    }
+    printf("the result is %.4f\n", result);
 }
 float f(float x)
 {

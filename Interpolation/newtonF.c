@@ -5,7 +5,7 @@ int main()
 {
     float f(float, int);
     int fact(int);
-    float x[10], y[10], d[10][10], u, a, sum = 0.0, h, tsum;
+    float x[10], y[10], d[10][10], p, a, sum = 0.0, h, tsum;
     int i, j, n;
     printf("enter the number of data\n");
     scanf("%d", &n);
@@ -13,8 +13,10 @@ int main()
     scanf("%f", &x[0]);
     printf("enter the differences\n");
     scanf("%f", &h);
-    for (i = 0; i < n; i++)
-        x[i + 1] = x[i] + h;
+    for (i = 1; i < n; i++)
+    {
+        x[i] = x[i - 1] + h;
+    }
     printf("enter the value of y\n");
     for (i = 0; i < n; i++)
         scanf("%f", &y[i]);
@@ -31,10 +33,10 @@ int main()
     }
     printf("enter the value where we interpolate y\n");
     scanf("%f", &a);
-    u = (a - x[0]) / h;
+    p = (a - x[0]) / h;
     for (i = 1; i < n; i++)
     {
-        sum = sum + (f(u, i) * d[i][0]) / fact(i);
+        sum = sum + (f(p, i) * d[i][0]) / fact(i);
         printf("%f\n", sum);
     }
     tsum = y[0] + sum;
