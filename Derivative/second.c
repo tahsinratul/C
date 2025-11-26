@@ -29,7 +29,7 @@ int main()
             d[i][j] = d[i - 1][j + 1] - d[i - 1][j];
             printf("d[%d][%d]=%f\t", i, j, d[i][j]);
         }
-        printf("\n");
+        printf("\n\n");
     }
     printf("enter the value of x where the value of y is to be interpolated\n");
     scanf("%f", &a);

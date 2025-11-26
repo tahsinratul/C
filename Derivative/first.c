@@ -30,7 +30,7 @@ int main()
             d[i][j] = d[i - 1][j + 1] - d[i - 1][j];
             printf("d[%d][%d]=%f\t", i, j, d[i][j]);
         }
-        printf("\n");
+        printf("\n\n");
     }
     printf("enter the value of the point where we want to find the first derivative vale a=\t");
     scanf("%f", &a);
