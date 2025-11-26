@@ -45,10 +45,9 @@ float f(float p, int n, int i)
 {
     float prod = 1.0;
     int j;
-    for (j = 0; j < i - 1; ++j)
-        prod = prod * (p - j);
-    for (j = i; j < n; ++j)
-        prod = prod * (p - j);
+    for (j = 0; j < n; ++j)
+        if (j != i - 1)
+            prod = prod * (p - j);
     return (prod);
 }
 float df(float p, int n)
