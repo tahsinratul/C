@@ -58,10 +58,10 @@ float df(float p, int n)
         sum = sum + f(p, n, i);
     return (sum);
 }
-int fact(int m)
+int fact(int k)
 {
-    int j, prod = 1;
-    for (j = 1; j <= m; ++j)
-        prod = prod * j;
+    int prod = 1, i;
+    for (i = 1; i <= k; ++i)
+        prod = prod * i;
     return (prod);
 }

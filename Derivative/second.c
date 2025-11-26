@@ -58,13 +58,6 @@ int main()
         sum = sum + df(u, i) * d[i][0] / fact(i);
     printf("The second derivative of f at %f=%f\n", a, sum / h);
 }
-int fact(int k)
-{
-    int prod = 1, i;
-    for (i = 1; i <= k; ++i)
-        prod = prod * i;
-    return (prod);
-}
 float f(float p, int n, int i)
 {
     float prod = 1.0;
@@ -81,4 +74,11 @@ float df(float x, int n)
     for (i = 1; i <= n; ++i)
         sum = sum + f(x, n, i);
     return (sum);
+}
+int fact(int k)
+{
+    int prod = 1, i;
+    for (i = 1; i <= k; ++i)
+        prod = prod * i;
+    return (prod);
 }
