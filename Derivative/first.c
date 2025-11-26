@@ -7,7 +7,7 @@ int main()
     float f(float, int, int);
     float df(float, int);
     int fact(int);
-    float x[100], y[100], d[100][100], a, h, p, sum = 0.0, t_sum;
+    float x[100], y[100], d[100][100], a, h, p, sum = 0.0, tsum;
     int i, n, j;
     printf("enter the number of data n=\t");
     scanf("%d", &n);
@@ -37,8 +37,8 @@ int main()
     p = (a - x[0]) / h;
     for (i = 1; i < n; ++i)
         sum = sum + df(p, i) * d[i][0] / fact(i);
-    t_sum = sum / h;
-    printf("the required first derivative value at %f is %f\n", a, t_sum);
+    tsum = sum / h;
+    printf("the required first derivative value at %f is %f\n", a, tsum);
 }
 
 float f(float p, int n, int i)
@@ -60,7 +60,7 @@ float df(float p, int n)
 }
 int fact(int k)
 {
-    int prod = 1, i;
+    int i, prod = 1;
     for (i = 1; i <= k; ++i)
         prod = prod * i;
     return (prod);
