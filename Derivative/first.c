@@ -1,11 +1,12 @@
 // First derivative
 #include <stdio.h>
 #include <math.h>
-float f(float, int, int);
-float df(float, int);
-int fact(int);
+
 int main()
 {
+    float f(float, int, int);
+    float df(float, int);
+    int fact(int);
     float x[100], y[100], d[100][100], a, h, p, sum = 0.0, t_sum;
     int i, n, j;
     printf("enter the number of data n=\t");
@@ -39,14 +40,7 @@ int main()
     t_sum = sum / h;
     printf("the required first derivative value at %f is %f\n", a, t_sum);
 }
-float df(float p, int n)
-{
-    float sum = 0.0;
-    int i;
-    for (i = 1; i <= n; ++i)
-        sum = sum + f(p, n, i);
-    return (sum);
-}
+
 float f(float p, int n, int i)
 {
     float prod = 1.0;
@@ -56,6 +50,14 @@ float f(float p, int n, int i)
     for (j = i; j < n; ++j)
         prod = prod * (p - j);
     return (prod);
+}
+float df(float p, int n)
+{
+    float sum = 0.0;
+    int i;
+    for (i = 1; i <= n; ++i)
+        sum = sum + f(p, n, i);
+    return (sum);
 }
 int fact(int m)
 {

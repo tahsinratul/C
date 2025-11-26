@@ -53,7 +53,7 @@ float f(float x, int i)
 }
 int fact(int k)
 {
-    int prod = 1, i;
+    int i, prod = 1;
     for (i = 1; i <= k; i++)
         prod = prod * i;
     return (prod);

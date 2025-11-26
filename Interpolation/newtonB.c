@@ -5,7 +5,7 @@ int main()
 {
     float f(float, int);
     int fact(int);
-    float x[10], y[10], d[10][10], u, a, sum = 0.0, h, tsum;
+    float x[10], y[10], d[10][10], p, a, sum = 0.0, h, tsum;
     int i, j, n;
     printf("enter the number of data\n");
     scanf("%d", &n);
@@ -33,10 +33,10 @@ int main()
     }
     printf("enter the value where we interpolate y\n");
     scanf("%f", &a);
-    u = (a - x[n - 1]) / h;
+    p = (a - x[n - 1]) / h;
     for (i = 1; i < n; i++)
     {
-        sum = sum + (f(u, i) * d[i][n - 1 - i]) / fact(i);
+        sum = sum + (f(p, i) * d[i][n - 1 - i]) / fact(i);
         printf("%f\n", sum);
     }
     tsum = y[n - 1] + sum;
@@ -53,7 +53,7 @@ float f(float x, int i)
 }
 int fact(int k)
 {
-    int prod = 1, i;
+    int i, prod = 1;
     for (i = 1; i <= k; i++)
         prod = prod * i;
     return (prod);
