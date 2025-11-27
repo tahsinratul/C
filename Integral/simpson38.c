@@ -3,7 +3,7 @@
 #include <math.h>
 int main()
 {
-    float f(float x);
+    float f(float);
     float a, b, h, result;
     float sum_even = 0.0, sum_odd = 0.0;
     int i, n;

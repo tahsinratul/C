@@ -1,4 +1,4 @@
-// newton method x^4-2x^3-4x^2+4x+4
+// newton method x^3-2x-5=0
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -27,9 +27,9 @@ int main()
 }
 float f(float x)
 {
-    return (pow(x, 4) - 2.0 * pow(x, 3) - 4 * pow(x, 2) + 4 * x + 4.0);
+    return (pow(x, 3) - 2 * x - 5);
 }
 float df(float x)
 {
-    return (4 * pow(x, 3) - 6.0 * pow(x, 2) - 8 * x + 4);
+    return (3 * pow(x, 2) - 2);
 }

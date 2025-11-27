@@ -3,7 +3,7 @@
 #include <math.h>
 int main()
 {
-    float f(float x);
+    float f(float);
     float result, a, b, sum, h;
     int i, n;
     printf("enter the subdivision n\n");
