@@ -24,7 +24,6 @@ int main()
             printf("%d\t\t\t%f\n", i, x);
         }
         printf("the functional value at x is f(%.6f)=%10.6f\n", x, f(x));
-        printf("the iteration number is =%3d", i);
     }
 }
 float f(float x)
