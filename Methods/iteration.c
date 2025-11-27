@@ -6,7 +6,7 @@ int main()
     float f(float);
     float p(float);
     float dp(float);
-    float x0, x1, x, tol = 0.0001, h;
+    float x0, x, tol = 0.001, h;
     int i;
     printf("enter the initial guess x0\n");
     scanf("%f", &x0);
@@ -14,18 +14,18 @@ int main()
         printf(" the initial guess value x0 is not suitable\n");
     else
     {
-        h = fabs(x0);
+        h = fabs(x0 - x);
         printf("the ith iterative is\n");
         printf("ite.no\t\t\t x\n");
         for (i = 1; h > tol; i++)
         {
-            x1 = p(x0);
-            h = fabs(x0 - x1);
-            x0 = x1;
-            printf("%d\t\t\t%f\n", i, x1);
+            x = p(x0);
+            h = fabs(x0 - x);
+            x0 = x;
+            printf("%d\t\t\t%f\n", i, x);
         }
-        printf("the functional value at x1 is f(%f)=%f\n", x1, f(x1));
-        printf("the iteration number is =%d\n", i - 1);
+        printf("the functional value at x1 is f(%f)=%10f\n", x, f(x));
+        printf("the iteration number is =%4d\n", i - 1);
     }
 }
 float f(float x)
