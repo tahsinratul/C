@@ -14,6 +14,8 @@ int main()
     else
     {
         h = fabs(x0 - x);
+        printf("The ith iteration is\n");
+        printf("ith no\t\t\t x\n");
         for (i = 1; h > tol; i++)
         {
             x = x0 - (f(x0) / df(x0));
@@ -21,8 +23,8 @@ int main()
             x0 = x;
             printf("%d\t\t\t%f\n", i, x);
         }
-        printf("the functional value at x is f(%.6f)=%.6f\n", x, f(x));
-        printf("the iteration number is =%d\n", i);
+        printf("the functional value at x is f(%.6f)=%10.6f\n", x, f(x));
+        printf("the iteration number is =%3d", i);
     }
 }
 float f(float x)
