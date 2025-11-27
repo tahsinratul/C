@@ -24,8 +24,10 @@ int main()
     {
         s = 0;
         for (j = 1; j <= n; j++)
+        {
             if (i != j)
                 s = s + fabs(a[i][j]);
+        }
         if (fabs(a[i][i]) <= s)
         {
             v = 0;

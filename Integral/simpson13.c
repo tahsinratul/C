@@ -24,6 +24,7 @@ int main()
     }
     printf("the integral value with respect to simpson1/3 rule is %5f\n", result);
 }
+
 float f(float x)
 {
     return 1 / (1 + x);
