@@ -3,10 +3,10 @@
 #include <math.h>
 int main()
 {
-    float a[10][10], b[10], x[10][10], s, v = 1;
+    float a[10][10], b[10], x[10][10], s = 0.0, v = 1;
     int n, i, j, k, p;
 
-    printf("Enter the order of system of equation\n ");
+    printf("Enter the order of system of equation\n");
     scanf("%d", &n);
 
     printf("Enter the coefficient matrix \n");
@@ -22,7 +22,6 @@ int main()
     scanf("%d", &p);
     for (i = 1; i <= n; i++)
     {
-        s = 0;
         for (j = 1; j <= n; j++)
         {
             if (i != j)
@@ -45,7 +44,6 @@ int main()
         {
             for (i = 1; i <= n; i++)
             {
-                s = 0;
                 for (j = 1; j <= n; j++)
                     if (i != j)
                         s = s + a[i][j] * x[k - 1][j] / a[i][i];

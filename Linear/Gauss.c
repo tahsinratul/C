@@ -3,7 +3,7 @@
 #include <math.h>
 int main()
 {
-    float a[5][5], b[5], x[5][5], s, v = 1;
+    float a[5][5], b[5], x[5][5], s = 0.0, v = 1;
     int n, i, j, k, p;
     printf("Enter the order of system of equation\n ");
     scanf("%d", &n);
@@ -18,7 +18,6 @@ int main()
     scanf("%d", &p);
     for (i = 1; i <= n; i++)
     {
-        s = 0;
         for (j = 1; j <= n; j++)
             if (i != j)
                 s = s + fabs(a[i][j]);
@@ -38,7 +37,6 @@ int main()
         {
             for (i = 1; i <= n; i++)
             {
-                s = 0;
                 for (j = 1; j <= n; j++)
                     if (i > j)
                         s = s + a[i][j] * x[k][j] / a[i][i];
