@@ -61,10 +61,10 @@ int main()
 float f(float x, int n, int i)
 {
     float prod = 1.0;
-    int j;
-    for (j = 0; j < n; ++j)
-        if (j != i - 1)
-            prod = prod * (x - j);
+    int l;
+    for (l = 0; l < n; ++l)
+        if (l != i - 1)
+            prod = prod * (x - l);
     return (prod);
 }
 float df(float x, int n)
