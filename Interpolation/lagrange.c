@@ -4,7 +4,7 @@
 int main()
 {
     int i, j, n;
-    float sum = 0.0, a, x[10], y[10], prod;
+    float sum = 0.0, a, x[10], y[10], prod = 1.0;
     printf("enter the number of data \n");
     scanf("%d", &n);
     printf("enter the values of data (independent)\n");
@@ -15,10 +15,9 @@ int main()
         scanf("%f", &y[i]);
     printf("enter the value where we want to interpolate\n");
     scanf("%f11.3", &a);
-    for (i = 0; i <= n; ++i)
+    for (i = 0; i < n; ++i)
     {
-        prod = 1.0;
-        for (j = 0; j <= n; ++j)
+        for (j = 0; j < n; ++j)
         {
             if (i != j)
                 prod = prod * ((a - x[j]) / (x[i] - x[j]));
