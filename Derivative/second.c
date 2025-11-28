@@ -34,16 +34,16 @@ int main()
     printf("enter the value of x where the value of y is to be interpolated\n");
     scanf("%f", &a);
     p = (a - x[0]) / h;
-    sum = 0.0;
-    for (i = 1; i < n; ++i)
+    sum = d[1][0];
+    for (i = 2; i < n; ++i)
         sum = sum + df(p, i) * d[i][0] / fact(i);
     printf("The first derivative of f at %f=%f\n", a, sum / h);
     for (j = 0; j < n; ++j)
     {
         b = x[j];
         p = (b - x[0]) / h;
-        sum = 0.0;
-        for (i = 1; i < n; ++i)
+        sum = d[1][0];
+        for (i = 2; i < n; ++i)
             sum = sum + df(p, i) * d[i][0] / fact(i);
         y[j] = sum / h;
     }
@@ -53,26 +53,26 @@ int main()
         for (j = 0; j < n - i; ++j)
             d[i][j] = d[i - 1][j + 1] - d[i - 1][j];
     p = (a - x[0]) / h;
-    sum = 0.0;
-    for (i = 1; i < n; ++i)
+    sum = d[1][0];
+    for (i = 2; i < n; ++i)
         sum = sum + df(p, i) * d[i][0] / fact(i);
     printf("The second derivative of f at %f=%f\n", a, sum / h);
 }
-float f(float p, int n, int i)
+float f(float x, int n, int i)
 {
     float prod = 1.0;
     int j;
     for (j = 0; j < n; ++j)
         if (j != i - 1)
-            prod = prod * (p - j);
+            prod = prod * (x - j);
     return (prod);
 }
-float df(float p, int n)
+float df(float x, int n)
 {
     int i;
     float sum = 0.0;
     for (i = 1; i <= n; ++i)
-        sum = sum + f(p, n, i);
+        sum = sum + f(x, n, i);
     return (sum);
 }
 int fact(int k)
