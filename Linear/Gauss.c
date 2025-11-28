@@ -5,7 +5,7 @@ int main()
 {
     float a[5][5], b[5], d[5][5], s = 0.0, v = 1;
     int n, i, j, k, p;
-    printf("Enter the order of system of equation\n ");
+    printf("Enter the order of system of equation\n");
     scanf("%d", &n);
     printf("Enter the coefficient matrix \n");
     for (i = 1; i <= n; i++)
@@ -53,10 +53,7 @@ int main()
             printf("\n\n");
         }
         printf("approximation solution of the system is\n");
-        {
-            for (i = 1; i <= n; i++)
-                printf("x%d=%f\t", i, d[p][i]);
-            printf("\n\n");
-        }
+        for (i = 1; i <= n; i++)
+            printf("x%d=%f\t", i, d[p][i]);
     }
 }

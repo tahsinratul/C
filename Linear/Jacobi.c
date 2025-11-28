@@ -58,10 +58,7 @@ int main()
             printf("\n\n");
         }
         printf("approximation solution of the system is\n");
-        {
-            for (i = 1; i <= n; i++)
-                printf("x%d=%f\t", i, d[p][i]);
-            printf("\n\n");
-        }
+        for (i = 1; i <= n; i++)
+            printf("x%d=%f\t", i, d[p][i]);
     }
 }
