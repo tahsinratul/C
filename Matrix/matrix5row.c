@@ -3,7 +3,7 @@
 #include <math.h>
 int main()
 {
-    float a[5][5], c;
+    float a[5][5], r;
     int m, n, m1, n1, i, j;
 
     printf("Enter the order of A\n");
@@ -18,9 +18,9 @@ int main()
     scanf("%d%d", &m1, &n1);
     for (j = 1; j <= n; ++j)
     {
-        c = a[m1][j];
+        r = a[m1][j];
         a[m1][j] = a[n1][j];
-        a[n1][j] = c;
+        a[n1][j] = r;
     }
     printf("The matrix after interchanging the two rows\n");
     for (i = 1; i <= m; i++)
