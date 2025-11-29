@@ -4,7 +4,7 @@
 int main()
 {
     float f(float);
-    float result, a, b, sum, h;
+    float result, a, b, sum = 0.0, h;
     int i, n;
     printf("enter the subdivision n\n");
     scanf("%d", &n);
@@ -12,7 +12,6 @@ int main()
     scanf("%f", &a);
     printf("enter the upper limit b\n");
     scanf("%f", &b);
-    sum = 0.0;
     h = (b - a) / n;
     for (i = 1; i < n; i++)
     {
