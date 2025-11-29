@@ -3,7 +3,7 @@
 #include <math.h>
 int main()
 {
-    float a, b, h, m, tol;
+    float a, b, h, m, tol = 0.001;
     int i;
     float f(float);
 
@@ -20,8 +20,6 @@ int main()
     }
     else if (f(a) * f(b) < 0)
     {
-        printf("enter the tolerance\n");
-        scanf("%f", &tol);
         h = fabs(a - b);
         printf("the ith iterative is \n");
         printf("ith no\t\t\t x\n");
