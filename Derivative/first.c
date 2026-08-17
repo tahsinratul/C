@@ -1,4 +1,4 @@
-// First derivative
+// First derivatives
 #include <stdio.h>
 #include <math.h>
 
